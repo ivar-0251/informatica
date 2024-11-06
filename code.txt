@@ -1,0 +1,4 @@
+SELECT leden.voornaam, leden.naam, boetes.datum, boetes.bedrag
+FROM leden, boetes
+WHERE leden.lidnr = boetes.lidnr AND boetes.bedrag > '49'
+ORDER BY boetes.bedrag DESC, boetes.datum ASC
