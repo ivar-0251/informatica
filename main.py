@@ -12,11 +12,9 @@ result = cursor.fetchall()
 
 db.close()
 
-if os.path.exists("output.txt"):
-    os.remove("output.txt")
+i=0
+for item in result:
+    i += 1
+    print(f"{i}. " + str(item) + "\n")
 
-with open("output.txt", "w") as file:
-    for item in result:
-        file.write(str(item) + "\n")
-
-    file.close()
+file.close()
